@@ -6,9 +6,9 @@
     <title>My page title</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
 
-    <style>
+    <style type="text/css">
       :root {
-        --base-font-color: rgb(131,148,150);
+        --base-font-color: rgb(161, 174, 175);
         --secondary-font-color: rgb(88,110,117);
         --emphasised-font: rgb(147,161,161);
 
@@ -24,15 +24,43 @@
         --c-cyan: rgb(42,161,152);
         --c-green: rgb(133,153,0);
       }
+
+      body {background-color: var(--c-background-color);}
+      p { color: var(--base-font-color); }
+      A:link { COLOR: var(--c-magenta) }
+      A:hover { COLOR: var(--c-orange) }
+      
+      h1 
+      {
+        background-color: var(--c-background-highlights);
+        text-align:center;
+        font-size: 150%;
+      }
+      h2 {color: var(--base-font-color);}
+      
+      .borderexample 
+      {
+      border-width:3px;
+      border-style:solid;
+      border-color: var(--c-cyan);
+      }
+      
+      ul
+      {
+        text-align: center;
+        flex-direction: column;
+        list-style-type: none;
+      }
     </style>
 
   </head>
 
-  <body>
+  <body style="background-color: var(--c-background-color)">
+    
     <!-- Here is our main header that is used across all the pages of our website -->
 
     <header>
-      <h1 style="background-color: var(--c-background-color);">Header</h1>
+      <h1>Header</h1>
     </header>
 
     <nav>
@@ -59,25 +87,30 @@
 
         
         <h2>Article heading</h2>
-        <p style="color: ;--base-font-color">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>
+        
+        <div class="borderexample">
+       
+        <h2>Subsection</h2>
+        
+        <p>Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.</p>
 
-        <h3>Subsection</h3>
-        <p style="color: ;--base-font-color">
-        Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.
+        <p>Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.</p>
+        <a href="https://www.overclockers.com.au">OCAU</a>
 
-        Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.</p>
-
-        <h3>Another subsection</h3>
-        <p style="color: ;--base-font-color">
-        Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
-
-        Vivamus fermentum semper porta. Nunc diam velit, adipscing ut tristique vitae sagittis vel odio. Maecenas convallis ullamcorper ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, is fringille sem nunc vet mi.</p>
+        </div>
+        <div class="borderexample">
+        <h2>Another subsection</h2>
+        
+        <p>Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
+        
+        <p>Vivamus fermentum semper porta. Nunc diam velit, adipscing ut tristique vitae sagittis vel odio. Maecenas convallis ullamcorper ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, is fringille sem nunc vet mi.</p>
+        </div>
       </article>
 
       <!-- the aside content can also be nested within the main content -->
       <aside>
-        <h2>Related</h2>
+        <h2 >Related</h2>
 
         <ul>
           <li><a href="#">Oh I do like to be beside the seaside</a></li>
@@ -93,7 +126,7 @@
     <!-- And here is our main footer that is used across all the pages of our website -->
 
     <footer>
-       ©Copyright 2050 by nobody. All rights reversed. </p>
+       <p style="background-color: var(--c-background-highlights);">©Copyright 2050 by nobody. All rights reversed. </p>
     </footer>
 
   </body>
