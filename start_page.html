@@ -25,19 +25,29 @@
         --c-green: rgb(133,153,0);
       }
 
-      body {background-color: var(--c-background-color);}
+      body {background-color: var(--c-background-color);max-width: 800px;}
       p { color: var(--base-font-color); }
-      A:link { COLOR: var(--c-magenta) }
+      a:link { COLOR: var(--c-magenta) }
       A:hover { COLOR: var(--c-orange) }
+      b:link { COLOR: var(--c-red) }
+      b:hover { COLOR: var(--c-blue) }
       
       h1 
       {
         background-color: var(--c-background-highlights);
         text-align:center;
+        font-size: 250%;
+        padding-top: 50px;
+      }
+      h2 
+      {
+        color: var(--base-font-color);
+        padding-top: 50px;
+      }
+      h3
+      {
         font-size: 150%;
       }
-      h2 {color: var(--base-font-color);}
-      
       .borderexample 
       {
       border-width:3px;
@@ -48,8 +58,31 @@
       ul
       {
         text-align: center;
-        flex-direction: column;
+        display:flex;
+        margin: auto;
+        padding: 0 50px;
         list-style-type: none;
+      }
+      ul a 
+      {
+      flex: auto;
+      text-align: center;
+      margin: 0 60px;
+      text-decoration: none;
+      }
+      ul b 
+      {
+      list-style-position: outside;
+      flex: column;
+      text-align: right;
+      margin: auto;
+      padding: auto;
+      }
+      aside
+      {
+        margin: 0px 0px 0px 0px;
+        text-align: right;
+        color: var(--c-green);
       }
     </style>
 
@@ -110,14 +143,14 @@
 
       <!-- the aside content can also be nested within the main content -->
       <aside>
-        <h2 >Related</h2>
+        <h3>Related</h3>
 
         <ul>
-          <li><a href="#">Oh I do like to be beside the seaside</a></li>
-          <li><a href="#">Oh I do like to be beside the sea</a></li>
-          <li><a href="#">Although in the North of England</a></li>
-          <li><a href="#">It never stops raining</a></li>
-          <li><a href="#">Oh well...</a></li>
+          <li><b href="#">Oh I do like to be beside the seaside</b></li>
+          <li><b href="#">Oh I do like to be beside the sea</b></li>
+          <li><b href="#">Although in the North of England</b></li>
+          <li><b href="#">It never stops raining</b></li>
+          <li><b href="#">Oh well...</b></li>
         </ul>
       </aside>
 
