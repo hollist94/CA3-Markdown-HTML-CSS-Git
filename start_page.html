@@ -6,7 +6,7 @@
     <title>My page title</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
 
-    <style type="text/css">
+    <style type="text/css"> /* settings colour bounds */
       :root {
         --base-font-color: rgb(161, 174, 175);
         --secondary-font-color: rgb(88,110,117);
@@ -25,37 +25,49 @@
         --c-green: rgb(133,153,0);
       }
 
-      body {background-color: var(--c-background-color);max-width: 800px;}
+      body 
+      {
+        background-color: var(--c-background-color);
+        max-width: 800px;
+        margin: 100px 0px;
+      }
+      /* establishing link colours on default and on hover */
       p { color: var(--base-font-color); }
       a:link { COLOR: var(--c-magenta) }
       A:hover { COLOR: var(--c-orange) }
       b:link { COLOR: var(--c-red) }
       b:hover { COLOR: var(--c-blue) }
       
-      h1 
+
+      header 
       {
         background-color: var(--c-background-highlights);
+        color: var(--c-yellow);
         text-align:center;
-        font-size: 250%;
+        font-size: 150%;
         padding-top: 50px;
       }
-      h2 
+      article /* main text body attempt to float left */
+      {
+        float: left;
+      }
+      h2 /* heading 2 code */
       {
         color: var(--base-font-color);
         padding-top: 50px;
       }
-      h3
+      h3 /* heading 3 code */
       {
         font-size: 150%;
       }
-      .borderexample 
+      .borderexample /* creating base border */
       {
       border-width:3px;
       border-style:solid;
       border-color: var(--c-cyan);
       }
       
-      ul
+      ul /* settings bounds for ul */
       {
         text-align: center;
         display:flex;
@@ -63,32 +75,26 @@
         padding: 0 50px;
         list-style-type: none;
       }
-      ul a 
+      ul a /* flexing top links across the screen */
       {
       flex: auto;
       text-align: center;
       margin: 0 60px;
-      text-decoration: none;
+      text-decoration: none; 
       }
-      ul b 
+      aside /* attempting to align related links to the right */
       {
-      list-style-position: outside;
-      flex: column;
-      text-align: right;
-      margin: auto;
-      padding: auto;
-      }
-      aside
-      {
-        margin: 0px 0px 0px 0px;
-        text-align: right;
+        text-align: center;
         color: var(--c-green);
+        float: right;
       }
+
     </style>
 
   </head>
 
   <body style="background-color: var(--c-background-color)">
+    
     
     <!-- Here is our main header that is used across all the pages of our website -->
 
@@ -114,7 +120,6 @@
 
     <!-- Here is our page's main content -->
     <main>
-
       <!-- It contains an article -->
       <article>
 
@@ -122,17 +127,17 @@
         <h2>Article heading</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>
         
-        <div class="borderexample">
-       
+        <div class="borderexample">  
+        <!--implementing top border-->  
         <h2>Subsection</h2>
         
         <p>Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.</p>
 
         <p>Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.</p>
         <a href="https://www.overclockers.com.au">OCAU</a>
-
         </div>
         <div class="borderexample">
+        <!--implementing bottom border-->
         <h2>Another subsection</h2>
         
         <p>Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
